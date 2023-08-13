@@ -2,6 +2,7 @@
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const image = document.querySelector(".imageContainer");
+const images = document.querySelectorAll("img");
 
 //*Number the images
 
@@ -16,6 +17,10 @@ next.addEventListener("click", () => {
 // **We gave negative according to it so that the picture starts from 0 at the beginning.
 
 function updateImg() {
+  if (currentImg > images.length) {
+    currentImg = 1;
+  }
+
   image.style.transform = `translateX(-${(currentImg - 1) * 700}px)`;
   console.log(image.style.transform);
 }
