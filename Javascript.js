@@ -6,7 +6,7 @@ const images = document.querySelectorAll("img");
 
 //*Number the images
 
-let currentImg = 1;
+let currentImg = 
 
 next.addEventListener("click", () => {
   currentImg++;
